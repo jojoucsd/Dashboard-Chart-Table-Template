@@ -1,0 +1,1 @@
+[{"cashier_id":1001, "cashier_name":"Tom", "num_sales":1234,"void":123,"cancel":32,"refund":2,"avg_customer":0},{"cashier_id":1002, "cashier_name":"Mary", "num_sales":91234,"void":97,"cancel":823,"refund":42,"avg_customer":0},{"cashier_id":1003, "cashier_name":"Peter", "num_sales":34,"void":423,"cancel":8,"refund":0,"avg_customer":0}]
