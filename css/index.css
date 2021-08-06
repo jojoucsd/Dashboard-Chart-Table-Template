@@ -9,3 +9,7 @@
 .white-bg-color {
     background-color: white;
 }
+
+.border-right {
+    border-right: 1px solid #F2F2F2;
+}
