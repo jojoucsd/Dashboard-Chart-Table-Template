@@ -42,7 +42,9 @@ $(document).ready(function(){
         }]
     })
 
-    $('.btn-range').daterangepicker();
+    $('.btn-range').daterangepicker({},(start, end, label) => {
+        $('.date-range').html(start.format('MM/DD/YYYY')+' - '+end.format('MM/DD/YYYY'))
+    });
 
     var ctx = document.getElementById('myChart'); // node
 
