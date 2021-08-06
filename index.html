@@ -1,7 +1,7 @@
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+<link rel="stylesheet" href="/css/index.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
@@ -10,7 +10,41 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://unpkg.com/bootstrap-table@1.18.3/dist/bootstrap-table.min.js"></script>
 <script src="index.js"></script>
-<a class="btn btn-range" href="#">Select Date Range</a>
-<canvas id="myChart" width="auto" height="auto"></canvas>
-<table id="table">
-</table>
+<body class="grey-bg-color">
+    <ul class="nav shadow-sm bg-white rounded">
+        <li class="nav-item">
+        <img src="/img/logo.png">
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#"><img src="/img/icon-grid.png"></a>
+        </li>
+        <li class="nav-item default-color">
+        <img src="/img/icon-chart.png"> Reports: Sales - Cash Register
+        </li>
+        <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul>
+    <div class="m-3">
+        <div class="white-bg-color">
+            <div class="col ">
+                <a class="btn btn-range btn-outline-secondary" href="#">Select Date Range</a>    
+            </div>
+            
+        </div>
+    </div>
+    <div class="m-3 ">
+        <div class="white-bg-color p-3">
+            <canvas id="myChart" width="auto" height="auto"></canvas>
+            <hr/>
+            
+            <table id="table">
+            </table>
+            
+        </div>
+    </div>
+</body>
+
+
+
+
