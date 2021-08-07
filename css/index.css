@@ -1,5 +1,13 @@
+body {
+    font-size: 13px;
+}
+
 .default-color {
     color: #E74C3C;
+}
+
+.nav-height-50 {
+    height: 50px;
 }
 
 .grey-bg-color {
@@ -10,6 +18,22 @@
     background-color: white;
 }
 
+.border-left {
+    border-left: 1px solid #F2F2F2;
+}
+
 .border-right {
     border-right: 1px solid #F2F2F2;
+}
+
+.icon {
+    max-width: 24px;
+}
+
+.icon-sm {
+    max-width: 15px;
+}
+
+.font-sm {
+    font-size: 11px;
 }
