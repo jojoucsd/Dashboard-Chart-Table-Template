@@ -3,6 +3,16 @@ function priceFormatter(value) {
 }
 
 $(document).ready(function(){
+    $('.btn-range').daterangepicker({},(start, end, label) => {
+        $('.date-range').html(start.format('MM/DD/YYYY')+' - '+end.format('MM/DD/YYYY'))
+    });
+    $('.btn-show-report').click(() => {
+        //TODO: generate report callback when the button is clicked.
+    });
+    generateReport();
+});
+
+function generateReport() {
     $('#table').bootstrapTable({
         url: 'test.json',
         responseHandler: function(res){
@@ -42,9 +52,7 @@ $(document).ready(function(){
         }]
     })
 
-    $('.btn-range').daterangepicker({},(start, end, label) => {
-        $('.date-range').html(start.format('MM/DD/YYYY')+' - '+end.format('MM/DD/YYYY'))
-    });
+    
 
     var ctx = document.getElementById('myChart'); // node
 
@@ -82,5 +90,4 @@ $(document).ready(function(){
             }
         }
     });
-});
-
+}
