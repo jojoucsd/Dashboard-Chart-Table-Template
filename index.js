@@ -12,6 +12,12 @@ $(document).ready(function(){
     generateReport();
 });
 
+function urlFormatter (data) {
+    // console.log('data', data)
+    return "<a href=" + data +" target=`_blank`>Clip</a>"
+
+}
+
 function generateReport() {
     $('#table').bootstrapTable({
         url: 'test.json',
@@ -49,7 +55,16 @@ function generateReport() {
             field: 'avg_customer',
             title: 'Avg Customer',
             sortable: true
-        }]
+        }, {
+            field: 'url',
+            title: 'Url',
+            align: 'center',
+            clickToSelect: false,
+            sortable: true,
+            formatter: urlFormatter            
+        }
+    
+    ]
     })
 
     
@@ -57,27 +72,25 @@ function generateReport() {
     var ctx = document.getElementById('myChart'); // node
 
     var myChart = new Chart(ctx, {
-        type: 'line',
+        type: 'bar',
         data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: ['No Sales', 'Void', 'Cancel', 'Refund', 'Customer'],
             datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
+                label: '# Counts',
+                data: [12, 19, 3, 5, 2],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
                     'rgba(255, 206, 86, 0.2)',
                     'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
+                    'rgba(153, 102, 255, 0.2)'
                 ],
                 borderColor: [
                     'rgba(255, 99, 132, 1)',
                     'rgba(54, 162, 235, 1)',
                     'rgba(255, 206, 86, 1)',
                     'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
+                    'rgba(153, 102, 255, 1)'
                 ],
                 borderWidth: 1
             }]
