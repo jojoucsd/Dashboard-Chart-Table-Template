@@ -2,6 +2,23 @@ function priceFormatter(value) {
     return '$'+value;
 }
 
+
+var apiSettings = {
+    "async": true,
+    "crossDomain": true,
+    "url" :"http://missionalpr.com/pos_test/access_test.php",
+    "method" : "POST",
+    "headers" : {
+        "cache-control": "no-cache",
+        'Content-Type':'application/json',
+    },
+    "data" :{"device_sn":"5df65990",
+    "account_id":"lighthouse",
+    "account_token":"fake_token_not_used",
+    "from_time":"2021-08-15 00:00:00",
+    "to_time":"2021-08-15 23:59:59",
+    "comments":""}
+}
 $(document).ready(function(){
     $('.btn-range').daterangepicker({},(start, end, label) => {
         $('.date-range').html(start.format('MM/DD/YYYY')+' - '+end.format('MM/DD/YYYY'))
@@ -9,7 +26,17 @@ $(document).ready(function(){
     $('.btn-show-report').click(() => {
         //TODO: generate report callback when the button is clicked.
     });
+ 
     generateReport();
+
+    $('#showReport').click(function (){
+        console.log('clicked')
+        $.ajax(apiSettings).done(function (res) {
+            // console.log(res)
+             console.log(res)
+        })
+
+    })
 });
 
 function urlFormatter (data) {
@@ -26,7 +53,7 @@ function generateReport() {
         pageSize: 100,
         paginationHAlign: 'right',
         responseHandler: function(res){
-            console.log(res);
+            // console.log(res);
             return res;
         },
         columns: [{
