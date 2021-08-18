@@ -37,3 +37,18 @@ body {
 .font-sm {
     font-size: 11px;
 }
+
+
+.bootstrap-table .fixed-table-container .fixed-table-body {
+    height: initial !important;
+    /* override the height so that the table is not expanded to 100% */
+}
+
+/* centering the pagination */
+.fixed-table-pagination {
+    text-align: center;
+}
+
+.bootstrap-table .fixed-table-pagination>.pagination {
+    display: inline-block;
+}

@@ -21,39 +21,38 @@ function urlFormatter (data) {
 function generateReport() {
     $('#table').bootstrapTable({
         url: 'test.json',
+        sidePagination: 'client',
+        pagination: true,
+        pageSize: 100,
+        paginationHAlign: 'right',
         responseHandler: function(res){
+            console.log(res);
             return res;
         },
         columns: [{
-            field: 'cashier_id',
-            title: 'Cashier ID',
+            field: 'ID',
+            title: 'ID',
             sortable: true
         }, {
-            field: 'cashier_name',
-            title: 'Cashier Name',
+            field: 'REG_NAME',
+            title: 'Reg Name',
             sortable: true
         }, {
-            field: 'num_sales',
-            title: 'No Sales',
-            sortable: true
-        }, {
-            field: 'void',
-            title: 'Void',
+            field: 'AMOUNT',
+            title: 'Amount',
             sortable: true,
             formatter: priceFormatter
         }, {
-            field: 'cancel',
-            title: 'Cancel',
-            sortable: true,
-            formatter: priceFormatter
+            field: 'POS_SYSTEM',
+            title: 'POS System',
+            sortable: true
         }, {
-            field: 'refund',
-            title: 'Refund',
-            sortable: true,
-            formatter: priceFormatter
+            field: 'TIMEZONE',
+            title: 'Timezone',
+            sortable: true
         }, {
-            field: 'avg_customer',
-            title: 'Avg Customer',
+            field: 'ACQ_TIME',
+            title: 'ACQ Time',
             sortable: true
         }, {
             field: 'url',
